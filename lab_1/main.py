@@ -45,7 +45,7 @@ print(xd.split())
 #zadanie 9
 zmienna_string = "XD xd xD"
 zmienna_float = 420.42
-zmienna_szestastkowy = "0xFFFF"
+zmienna_szestastkowy = 0xFFFF
 print(zmienna_string)
 print(zmienna_float)
-print(int(zmienna_szestastkowy, 16))
+print('{0:x}'.format(zmienna_szestastkowy))
