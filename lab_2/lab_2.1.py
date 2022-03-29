@@ -11,19 +11,20 @@ gry = {1:'Leauge of Legends', 2: 'Leauge of Legends', 3: 'Leauge of Legends'}
 print(len(gry))
 #zadanie 4
 a = input("aaa? aaa?: ")
-print("aaa:  " + str(len(a)))
-# #zadanie 5
-import sys
-x = int(sys.stdin.readline())
-y = int(sys.stdin.readline())
-z = int(sys.stdin.readline())
-aaaa = (x ** y) + z
-sys.stdout.write(str(aaaa))
+print("aaa:  " + str(a.count('a')))
+#zadanie 5
+import sys as s
+x = int(s.stdin.readline())
+y = int(s.stdin.readline())
+z = int(s.stdin.readline())
+aaaa = x + y + z
+s.stdout.write(str(aaaa))
+print('\n\n')
 #zadanie 6
 a1, b1, c1 = input("podaj 3 liczby: ").split()
 
-liczby = [a1, b1, c1]
-max = a1
+liczby = [int(a1), int(b1), int(c1)]
+max = int(a1)
 for x in liczby:
     if x > max:
         max = x
@@ -37,19 +38,25 @@ for x in listaa:
    i+=1
 
 print(listaa)
-#zadanie 8
+# #zadanie 8
 parzyste = []
 x=0
-while x < 3:
+while x < 10:
     m = int(input())
     if m%2==0:
         parzyste.append(m)
     x += 1
 print(parzyste)
 #zadanie 9
-coo = int(input())
 import math
+co = input("podaj liczbe: ")
 try:
-    print(math.sqrt(coo))
+    co = int(co)
+    xd = math.sqrt(co)
+    print(xd)
 except ValueError:
-    print("nie wyciągamy pierwiastka z liczby ujemnej")
+    if type(co) != int:
+        print("nie podabno liczby")
+    elif co < 0:
+        print("podano liczbe ujemna")
+
