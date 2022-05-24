@@ -76,4 +76,30 @@ XD = ciagi()
 XD.get_elements()
 XD.print()
 XD.sum(4,5)
+#zadanie 6
+class Robaczek:
+    def __init__(self, x, y, krok):
+        self.x = x
+        self.y = y
+        self.krok = krok
+    def go_up(self,steps):
+        self.y += abs(steps)*self.krok
+    def go_down(self,steps):
+        self.y -= abs(steps)*self.krok
+    def go_left(self,steps):
+        self.x -= abs(steps)*self.krok
+    def go_right(self,steps):
+        self.x += abs(steps)*self.krok
+    def find_me(self):
+        print('jestem tutaj [{},{}] '.format(self.x, self.y))
 
+R = Robaczek(0,0,5)
+R.find_me()
+R.go_up(2)
+R.find_me()
+R.go_left(3)
+R.find_me()
+R.go_right(6)
+R.find_me()
+R.go_down(4)
+R.find_me()
